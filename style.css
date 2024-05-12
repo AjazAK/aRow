@@ -1,0 +1,421 @@
+/* Stili za glavo (header) */
+header {
+  background: linear-gradient(rgb(134, 134, 254), rgb(136, 244, 244));
+  border: 3px solid #000003;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 4px #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigacijski meni (navbar) */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+  background-color: #322eaa;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dropdown meni */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Menijski gumb za manjše ekrane */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Prilagoditev za manjše zaslone (do 768px) */
+@media (max-width: 768px) {
+  nav ul {
+     flex-direction: column;
+  }
+
+  nav li {
+     margin: 10px 0;
+  }
+
+  .menu-toggle {
+     display: block;
+  }
+}
+
+
+/*skupno odzadje */
+.skupno-ozadje {
+  background-color: rgb(19, 183, 237); 
+  padding: 10px;
+}
+.skupno-ozadje p {
+  margin: 0; /* Odstranitev zunanjega prostora (roba) za vsak odstavek */
+  padding: 10px; /* Dodatek polnila za vsak odstavek */
+  border: 1px solid #ad1717; /* Dodatek roba za vsak odstavek */
+  background-color: rgb(160, 23, 234); /* Ozadje za vsak odstavek */
+}
+
+/*sprememba barve body*/
+body {
+  background-color: #000000;
+  transition: background-color 1s ease-in-out;
+  
+}
+
+body:hover {
+  background-color: #afafaf;
+}
+
+/*nihanje body
+body {
+  animation: nihanje 1s ease-in-out infinite alternate;
+}
+
+@keyframes nihanje {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+*/
+
+/*body*/
+body{
+  background-color:rgb(211, 236, 244);
+  text-align: justify;
+  font-family: 'Open Sans';font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  
+}
+
+/*slike*/
+.ožja_slika{
+  width: 400px;
+  height: 800px;
+  display: block;
+  margin: 0 auto; 
+}
+.img{width: 100%; 
+  max-width: 700px;
+  max-height: 800px;
+  /*position:fixed;*/
+  display: block;
+  margin: 0 auto; 
+  border: 3px solid #050149;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 4px #0011fb;
+ margin-bottom: 10%;}
+
+img {
+     border-radius: 10px;
+     max-width: 100%;
+     max-height: 100%;
+     }
+
+/*video*/
+video{
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin: 0 auto; 
+ border-radius: 10%;
+ transition: transform 0.3s;
+ border: 4px solid #002a4d;
+}
+video:hover {
+ transform: scale(1.1); /* Povečava videa za 10 % */
+}
+
+/*l-okvir*/
+iframe{
+ max-width: 50%;
+ max-height: 50%;
+ display: block;
+ margin: 0 auto; 
+}
+
+/*---------------------*/
+/*Modre črte na 1s*/
+/* desna stran črte*/
+
+
+h1::before{
+  position: absolute;
+  content: '';
+  width: 0px;
+  left: 0;
+  height: 5px;
+  background-color: rgb(8, 0, 255);
+  transition: all 1s;
+}
+
+h1:hover::before{
+  width: 50%;
+  /*transform:  scaleX(100%);*/
+}
+
+/* leva stran črte*/
+h1::after{
+  position: absolute;
+  content: '';
+  width: 0px;
+  right: 0;
+  height: 5px;
+  background-color: rgb(8, 0, 255);
+  transition: all 1s;
+}
+
+h1:hover::after{
+  width: 50%;
+ /* transform:  taranslateX(-100%);*/
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  /*text-shadow: 2px -2px 3px white;*/
+  background-color: rgb(1, 15, 40);
+  color: white;
+  height: 70px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 150%;
+  font-weight: bolder;
+  padding-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100%;
+  
+}
+
+.pos{
+  display: flex;
+  justify-content: center; /* Poravnavanje na sredino vodoravno */
+  margin: 0;
+  width: 100%;
+}
+
+p {
+  border: 1px solid #357dc9; /* Obroba okoli p-ja */
+  background-color: #357dc9;
+  padding: 10px; /* Dodajte polnilo okrog besedila v p-ju */
+  text-align: center; /* Poravnava besedila na sredino */
+  display: inline-block; /* Omogočite inline-block elemente, da se pravilno poravnajo */
+  margin: 0 auto 20px; /* Dodatek spodnjega prostora za preprečitev prekrivanja s footerjem */
+  border-radius: 10px; /* Zaobljeni robovi */
+}
+
+ul{
+  padding: 10px; /* Dodajte polnilo okrog besedila v p-ju */
+  text-align: center; /* Poravnava besedila na sredino */
+  display: inline-block; /* Omogočite inline-block elemente, da se pravilno poravnajo */
+  margin: 0 auto 20px; /* Dodatek spodnjega prostora za preprečitev prekrivanja s footerjem */
+}
+
+h1{
+  border: 1px solid ; /* Obroba okoli p-ja */
+  padding: 10px; /* Dodajte polnilo okrog besedila v p-ju */
+  text-align: center; /* Poravnava besedila na sredino */
+  display: inline-block; /* Omogočite inline-block elemente, da se pravilno poravnajo */
+  margin: 0 auto 20px; /* Dodatek spodnjega prostora za preprečitev prekrivanja s footerjem */
+  border-radius: 10px; /* Zaobljeni robovi */
+}
+
+.levo{
+  color: black;
+}
+
+/* Oblikovanje seznama ul */
+ul {
+  list-style-type: none; /* Odstrani privzeti marker seznama */
+  padding: 0; /* Odstrani polnilo seznama */
+  margin: 0; /* Odstrani zunanji rob seznama */
+}
+
+/* Oblikovanje elementov li v seznamu */
+ul li {
+  margin: 10px 0; /* Dodaj malo prostora med elementi seznama */
+  
+}
+
+/* Svetlo modra ozadja za elemente seznama */
+ul li {
+  background-color: #add8e6; /* Svetlo modra barva ozadja */
+  padding: 10px; /* Dodaj polnilo okrog elementov seznama */
+  border-radius: 5px; /* Zaobljeni robovi za elemente seznama */
+  text-decoration: none; /* Odstrani podčrtaj (povezave) */
+  color: black; /* Bela barva pisave */
+  cursor: pointer; /* Spremeni kazalnik miške v roko na hover */
+}
+
+/* Svetlo modra ozadja za elemente seznama ob hoverju */
+ul li:hover {
+  background-color: #87ceeb; /* Svetlo modra barva ob hoverju */
+  transition: background-color 0.3s; /* Dodatek prehoda za gladko animacijo */
+}
+
+.nicpodcrtave{
+  text-decoration: none;
+  transition: font-size 0.2s;
+}
+
+.nicpodcrtave:hover{
+  font-size: 110%;
+}
+
+h4 {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  border: 10px solid;
+  animation: colorChange 5s linear infinite;
+}
+
+.skupno_besedilo{
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+@keyframes colorChange {
+  0% { border-color: rgb(0, 0, 255); }
+  25% { border-color: rgb(0, 128, 255); }
+  50% { border-color: rgb(0, 255, 255); }
+  75% { border-color: rgb(0, 213, 255); }
+  100% { border-color: rgb(0, 13, 255); }
+}
+
+.modri-gumb {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modri-gumb:hover {
+  background-color: #005aa6;
+}
+
+.caret {
+  border-top: 4px solid black;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Olimpijski krogi */
+.canva{
+  background-color: #87ceeb;
+  width: 500px;
+  max-height: 500px;
+}
+
+/* Tabela s slikami */
+.container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+#image-table img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#image-table img:hover {
+  transform: scale(1.1);
+}
+
+/* besedilo v sliko */
+#image-container {
+  text-align: center;
+}
+
+#image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#image-container img:hover {
+  transform: scale(1.1);
+}
